@@ -1,0 +1,12 @@
+[project]
+name = "todo-backend"
+version = "0.1.0"
+description = "Simple TODO app backend"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn>=0.34.0",
+]
+
+[tool.uv]
+dev-dependencies = []
