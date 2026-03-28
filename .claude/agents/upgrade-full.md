@@ -11,6 +11,7 @@ description: >
   </example>
 model: sonnet
 color: red
+isolation: worktree
 ---
 
 You are a full dependency upgrade agent. Upgrade everything to the latest version, run tests, and report results.

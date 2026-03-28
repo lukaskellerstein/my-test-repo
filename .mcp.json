@@ -3,6 +3,13 @@
         "langfuse-docs": {
             "type": "http",
             "url": "https://langfuse.com/api/mcp"
+        },
+        "playwright-test": {
+            "command": "npx",
+            "args": [
+                "@playwright/mcp@latest",
+                "--isolated"
+            ]
         }
     }
 }

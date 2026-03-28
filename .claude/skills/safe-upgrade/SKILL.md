@@ -27,7 +27,7 @@ Identify whether this is a single project or a monorepo:
 
 ### Step 2: Launch 3 Agents in Parallel
 
-Launch all 3 agents in a **single message** using the Agent tool. Each MUST use `isolation: "worktree"` so it gets its own isolated copy of the repository.
+Launch all 3 agents in a **single message** using the Agent tool.
 
 **Pass the project discovery to each agent.** Include the list of detected projects/packages and their paths in each agent's prompt so they know what to upgrade.
 
@@ -106,9 +106,8 @@ git merge [branch-name]
 
 ### Important
 
-- **All 3 agents MUST run with `isolation: "worktree"`** — this is the core safety guarantee
 - **Launch all 3 in a single message** — they run in parallel for speed
-- **Never modify the user's working directory** — all changes happen in worktrees
+- **Never modify the user's working directory** — all changes happen in worktrees (agents have `isolation: worktree` in their frontmatter)
 - **For monorepos**: pass the detected package list to each agent so they don't re-discover
 - **For monorepos**: agents must report results per-package, not as a single blob
 - Successful agents leave a git branch the user can merge
